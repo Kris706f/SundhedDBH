@@ -1,0 +1,1325 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+/*-----Under her er CSS til vores header------*/
+.headerbar{
+    width: 100%;
+    height: 75px;
+    background-color: #9C5238;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+.venstrelink{
+    height: 50px;
+    width: 10%;
+    padding-top: 25px;
+    text-align: center;
+    z-index: 2;
+}
+.venstrelink a{
+    text-decoration: none;
+    color: #fff;
+}
+.logo{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 2;
+}
+
+/*Under her er CSS til vores Footer*/
+footer{
+    width: 100%;
+    height: 370px;
+    background-color: #8E9F99;
+}
+.footertop{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2%;
+}
+.footerlogo{
+    height: 150px;
+    width: 150px;
+    border: 5px solid #9C5238;
+    border-radius: 50%;
+}
+.footerlink{
+    height: 150px;
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footerlink a{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+    color: #000;
+    
+}
+.footerikon{
+    height: 150px;
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+hr {
+    margin: 20px 40px;
+    border: 1px solid #000;
+}
+.footerbund{
+    width: 100%;
+    height: 120px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+/*-Herunder er stadig i header, men bare css til Burgermenu*/
+.hamburger{
+    display: block;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    z-index: 99;
+    padding-top: 10px;
+    padding-right: 5%;
+}
+.hamburger .bar, .hamburger:after, .hamburger:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin: 6px 0px;
+    transition: 0.4s;
+    background-color: #fff;
+}
+.hamburger.is-active:before{
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+.hamburger.is-active:after{
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+.hamburger.is-active .bar{
+    opacity: 0;
+}
+.mobile-nav{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 98;
+    background-color: #8E9F99;
+    padding-top: 120px;
+    transition: 0.4s;
+}
+.mobile-nav.is-active{
+    left: 0;
+
+}
+.mobile-nav a{
+    display: block;
+    margin: 0 auto 16px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background-color: #dad1c6;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*--------Herunder er der CSS til de forsider med billeder og tekst--------*/
+.forsidelang img{
+    width: 100%;
+    height: 850px;
+    opacity: 50%;
+}
+.forsidelang{
+    width: 100%;
+    height: 850px;
+    background-color: #000;
+}
+.forsidekort{
+    width: 100%;
+    height: 550px;
+    background-color: #8E9F99;
+}
+.forsidekort img{
+    width: 100%;
+    height: 550px;
+    opacity: 50%;
+}
+/*----------------Herunder er til selve forsiden og det under --------------------*/
+.forsidegalleri{
+    width: 90%;
+    height: 850px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.venstreforside{
+    width: 48%;
+    height: 100%;
+   }
+   .højreforside{
+    width: 48%;
+    height: 100%;
+   }
+.venstreforside img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.højreforside img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+/*---------Herunder er CSS til den nederste del på forsiden---------*/
+.produktside{
+    width: 100%;
+    height: 600px;
+    background-image: url(images/davidogbrod.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.produkttekst{
+    width: 95%;
+    height: 100%;
+    padding-left: 5%;
+}
+.produkttekst h4{
+    padding-top: 20%;
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+.produkttekst h5{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 5%;
+}
+.produktside img{
+    width: 100%;
+    height: 100%;
+    opacity: 60%;
+}
+
+
+/*---Herunder brugte jeg følgende fra w3schools "How TO - Position Text Over an Image"*/
+.forsidetekst{
+    width: 40%;
+    height: 700px;
+    position: absolute;
+    top: 150px;
+    left: 16px;
+    padding-left: 3%;
+}
+.forsidetekst h1{
+    font-family: 'Cabin Sketch', sans-serif;
+    color: #fff;
+    font-size: 150px;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+.forsidetekst h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    padding-bottom: 5%;
+}
+.korttekst{
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    top: 150px;
+    left: 16px;
+    padding-left: 3%;
+}
+.korttekst h1{
+    font-family: 'Cabin Sketch', sans-serif;
+    color: #fff;
+    font-size: 110px;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+.korttekst h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    padding-bottom: 5%;
+}
+/*---Herunder er til selve knappen i toppen af vores sider---*/
+.knap{
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #8E9F99;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 1;
+   }
+   
+   .knap::before,
+   .knap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+   }
+   
+   .knap::before {
+    left: -10px;
+    background: #8E9F99;
+   }
+   
+   .knap::after {
+    right: -10px;
+    background: #5c8073;
+   }
+   
+   .knap:hover::before,
+   .knap:hover::after {
+    width: 58%;
+   }
+   
+   .knap:hover span {
+    color: #fff;
+    transition: 0.3s;
+   }
+   
+   .knap span {
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.3s ease-in;
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    font-family: 'Montserrat',sans-serif;
+   }
+
+
+
+   /*------ Her CSS til bagsammen side - Frederik -------*/
+.infoside{ 
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 850px;
+    background-color: #9C5238;
+    }
+    .infotekst{
+        width: 40%;
+        height: 700px;
+        padding-top: 70px;
+    
+    }
+    .infobillede{
+        width: 35%;
+        height: 700px;
+        padding-top: 50px;
+    }
+    .infobillede img {
+        width: 100%;
+        border-radius: 20px;
+    }
+    
+    .infotekst h3{
+        font-family: 'Montserrat',sans-serif;
+        font-size: 40px;
+        color: #fff;
+    }
+    
+    .infotekst p{
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        padding-top: 35px;
+    }
+    
+    .tabel{
+        border-collapse: collapse;
+        width: 90%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    
+    }
+    
+    
+    .tabel td, th{
+        border: 1px solid black;
+        text-align: left;
+        padding: 10px;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+
+
+
+
+
+
+   /*----------Herunder er der CSS til Galleri siden-------------*/
+   .billedeside{
+    width: 100%;
+    height: 2000px;
+    background-color: #9C5238;
+    display: flex;
+    justify-content: space-evenly;
+   }
+   .billedeside img{
+    height: 100%;
+    width: 100%;
+    border-radius: 3%;
+   }
+   .venstrebillede{
+    width: 32%;
+    height: 100%;
+   }
+   .midtbillede{
+    width: 32%;
+    height: 100%;
+   }
+   .højrebillede{
+    width: 32%;
+    height: 100%;
+   }
+   /*-----Herunder laver jeg CSS til selve billede boksene-----*/
+   .lillebillede{
+    width: 100%;
+    height: 200px;
+    margin-top: 2%;
+   }
+   .mellembillede{
+    width: 100%;
+    height: 300px;
+    margin-top: 2%;
+   }
+   .storbillede{
+    width: 100%;
+    height: 500px;
+    margin-top: 2%;
+   }
+   .storbillede img{
+    width: 100%;
+   }
+
+   /*-------------------------------Herunder er CSS til Processiden----------------------------------*/
+   .processide{
+
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 5;
+
+   }
+   .processide img{
+    height: 100%;
+    padding-top: 2%;
+    z-index: 6;
+   }
+   .procestekst{
+    width: 50%;
+    height: 200px;
+    margin-top: 3%;
+    z-index: 6;
+    background-color: #9C5238;
+   }
+   .procesanimate{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    z-index: 6;
+    background-color: #9C5238;
+   }
+   h6{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    word-spacing: 5px;
+    font-style: italic;
+    z-index: 6;
+   }
+
+   /*--------Kort animation herunder---------*/
+   .kort{
+    font-family: 'Montserrat',sans-serif;
+    position: relative;
+    width: 350px;
+    height: 420px;
+    background: #8E9F99;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .kort:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--product-color);
+    clip-path: circle(150px at 80% 20%);
+    transition: .5s ease-in-out;
+  }
+  
+  .kort:hover:before {
+    clip-path: circle(300px at 80% -20%);
+  }
+  
+  .title {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-top: 12px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .stortitle {
+    font-size: 10em;
+    font-weight: 900;
+    font-style: italic;
+    color: #fff;
+    position: absolute;
+    max-width: 120%;
+    top: -150%;
+    transition: .6s;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .kort:hover .stortitle {
+    transform: translateY(60%);
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 5;
+  }
+  .kort:hover .content {
+    height: 190px;
+  }
+  .broedtekst{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: .5s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .kort:hover .broedtekst{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: .5s;
+  }
+  
+  .broedtekst div {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-right: 2px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 25px;
+  }
+  .cirkel {
+    --product-color: #5c8073;
+  }
+  .synlig {
+    display: block;
+}
+
+
+   .proces{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 5;
+    padding-top: 15%;
+    
+   }
+   #procesbaggrund{
+        background-image: url(images/baggrundstreg.png);
+        z-index: 1;
+   }
+
+
+
+   /*-------Herunder er der CSS til vores FIND OS--------*/
+   .kontakt{
+    background-color: #9C5238;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2%;
+   }
+
+.ikonboks{
+    width: 30%;
+    height: 400px;
+}
+.pladsholder{
+    width: 100px;
+    margin-left: 35%;
+    height: 100px;
+
+}
+.ikonboks h3{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+.ikonboks p{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding-top: 2%;
+    text-align: center;
+}
+.lokation{
+    width: 100%;
+    height: 800px;
+    background-color: #9C5238;
+}
+.lokationoverskrift{
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+.lokationoverskrift h3{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+}
+.lokationoverskrift p{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+}
+.stederne{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.bokssted{
+    width: 48%;
+    height: 600px;
+    text-align: center;
+}
+.bokssted h3{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    padding-top: 2%;
+}
+.bokssted p{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+}
+.bokssted img{
+    width: 100%;
+    border-radius: 10px;
+}
+.pladslokation{
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+}
+.beskedomrade{
+    width: 100%;
+    height: 800px;
+    background-color: #9C5238;
+}
+.beskedomradeoverskrift{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+.beskedomradeoverskrift h3{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+}
+.beskedomradeoverskrift p{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    padding-top: 2%;
+}
+.beskedomradeboks{
+    width: 100%;
+    height: 500px;
+}
+.beskedomradesend{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+/*---Herunder har vi til vores kontaktform---*/
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  label{
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+  }
+  
+  .container {
+    border-radius: 5px;
+    padding: 20px;
+    width: 60%;
+    margin-left: 20%;
+  }
+  .beskedomradeknap{
+
+    width: 30%;
+    height: 50px;
+    padding: 20px;
+    margin-left: 20%;
+    display: flex;
+  }
+  .beskedomradeknap h3{
+    color: #fff;
+    padding-left: 5%;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .beskedomrade button{
+    width: 10%;
+    margin-left: 45%;
+    font-family: 'Montserrat', sans-serif;
+  }
+    
+
+  /*------------------Herunder er der CSS til "Acceptere vilkårene"------------*/
+  .cbx {
+    position: relative;
+    top: 1px;
+    width: 27px;
+    height: 27px;
+    border: 1px solid #c8ccd4;
+    border-radius: 3px;
+
+    transition: background 0.1s ease;
+    cursor: pointer;
+    display: block;
+   }
+   
+   .cbx:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    width: 7px;
+    height: 14px;
+    opacity: 0;
+    transform: rotate(45deg) scale(0);
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: all 0.3s ease;
+    transition-delay: 0.15s;
+   }
+   
+   .lbl {
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+   }
+   
+   #cbx:checked ~ .cbx {
+    border-color: transparent;
+    background: #8E9F99;
+    animation: jelly 0.6s ease;
+   }
+   
+   #cbx:checked ~ .cbx:after {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+   }
+
+
+   /*Herunder er CSS til den videreudviklet side*/
+   .sundhedtop{
+    width: 100%;
+    height: 600px;
+    background-color: #8E9F99;
+    display: flex;
+    justify-content: space-around;
+   }
+   .surdej{
+    width: 50%;
+    height: 100%;
+    border: 2px solid #000;
+   }
+   .gaer{
+    width: 50%;
+    height: 100%;
+    border: 2px solid #000;
+   }
+   .billedeholder{
+    width: 250px;
+    height: 400px;
+    opacity: 0.5;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+   }
+   .billedeholder:hover{
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+   }
+   .billedeholder li{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+
+   }
+   .faktaoverskrift{
+    width: 100%;
+    height: 100px;
+    background-color: #8E9F99;
+   }
+   .faktaoverskrift h1{
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Cabin Sketch', sans-serif;
+    text-align: center;
+    padding-top: 2%;
+    }
+    .faktasidevenstre{
+        width: 100%;
+        background-color: #8E9F99;
+        height: 400px;
+    }
+    .faktasidehøjre{
+        width: 100%;
+        height: 400px;
+        background-color: #8E9F99;
+        
+    }
+    #faktavenstre{
+        padding-left: 10%;
+    }
+    #faktahøjre{
+        padding-left: 35%;
+    }
+    
+.flip-card {
+    background-color: transparent;
+    width: 700px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateX(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #5c8073;
+    color: white;
+  }
+  
+  .flip-card-back {
+    background-color: #fff;
+    color: #5c8073;
+    transform: rotateX(180deg);
+  }
+  .flip-card-front h2{
+    margin-top: 5%;
+    font-family: 'Cabin Sketch', sans-serif;
+    font-size: 50px;
+  }
+  .ikonholder{
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+  }
+  .flip-card-back p{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    padding: 20px;
+    line-height: 30px;
+  }
+
+  .quiz{
+    width: 100%;
+    height: 800px;
+    background-color: #8E9F99;
+  }
+  .quiz h1{
+    font-family: 'Cabin Sketch', sans-serif;
+    color: #000;
+    font-size: 50px;
+    background-color: transparent;
+    border-bottom: 1px solid #000;
+    padding-bottom: 30px;
+  }
+  .quiz h2{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: transparent;
+  }
+  .quizen{
+    background-color: transparent;
+    padding: 20px 0;
+  }
+  .spil{
+    background-color: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+  }
+  #answer-buttons{
+    background-color: transparent;
+  }
+  .btn{
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #5c8073;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .btn:hover{
+    background: #000;
+    color: #fff;
+  }
+  #next-btn{
+    background: #5c8073;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .correct{
+    background: #9aeabc;
+  }
+  .incorrect{
+    background: #ff9393;
+  }
+
+
+
+   @keyframes jelly {
+    from {
+     transform: scale(1, 1);
+    }
+   
+    30% {
+     transform: scale(1.25, 0.75);
+    }
+   
+    40% {
+     transform: scale(0.75, 1.25);
+    }
+   
+    50% {
+     transform: scale(1.15, 0.85);
+    }
+   
+    65% {
+     transform: scale(0.95, 1.05);
+    }
+   
+    75% {
+     transform: scale(1.05, 0.95);
+    }
+   
+    to {
+     transform: scale(1, 1);
+    }
+   }
+   
+   .hidden-xs-up {
+    display: none!important;
+   }
+   
+   /*---------Countdown CSS----------------*/
+.countdown{
+    width: 100%;
+    height: 200px;
+    background-color: #9C5238;
+}
+.countdown p{
+    text-align: center;
+    font-size: 120px;
+    color: #fff;
+    font-family: 'Cabin Sketch', sans-serif;
+}
+.countdown h2{
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.countdown{
+    height: 200px;
+}
+.countdown p{
+    font-size: 120px;
+}
+.countdown h2{
+    font-size: 20px;
+
+}
+
+   /*-----------RESPONSIVE-----------*/
+   /*--MOBIL LAYOUT--*/
+@media screen and (max-width:874px){
+    /*Header*/
+    .findlink{
+        display: none;
+    }
+    .laptoplogo{
+        display: none;
+    }
+    .mobillogo{
+        display: block;
+    }
+    .mobile-nav{
+        width: 400px;
+    }
+    /*Forside lang*/
+    .forsidetekst{
+        width: 70%;
+    }
+    .forsidetekst h1{
+        font-size: 100px;
+    }
+    .forsidetekst h2{
+        font-size: 20px;
+    }
+    .knap{
+        margin-top: 10%;
+    }
+    .forsidelang, .forsidelang img{
+        height: 700px;
+    }
+    /*Forside kort*/
+    .forsidekort{
+        height: 400px;
+    }
+    .forsidekort img{
+        height: 400px;
+    }
+    .korttekst{
+        width: 90%;
+    }
+    .korttekst h1{
+        font-size: 80px;
+    }
+    .korttekst h2{
+        font-size: 20px;
+    }
+    #tabelside{
+        height: 1100px;
+    }
+    .infobillede{
+        width: 70%;
+        height: 300px;
+        margin-left: 15%;
+        padding-top: 2%;
+    }
+    .laptopbillede{
+        display: none;
+    }
+    /*Infosiderne*/
+    .infoside{
+        display: block;
+        height: 600px;
+    }
+    .infotekst h3{
+        font-size: 20px;
+        text-align: center;
+    }
+    .infotekst{
+        width: 90%;
+        margin-left: 5%;
+        padding-top: 0px;
+    }
+    #forsidebillede{
+        display: none;
+    }
+    .infotekst p{
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+    }
+    .infotekst img{
+        width: 100%;
+    }
+    #forsidegalleri{
+        display: none;
+    }
+    /*Bunden af forsiden*/
+    .produkttekst h4{
+        font-size: 30px;
+    }
+    .produkttekst h5{
+        font-size: 15px;
+    }
+    .produktside{
+        height: 400px;
+    }
+    /*Footer*/
+    .footerlogo{
+        width: 100px;
+        height: 100px;
+        margin-left: 35%;
+    }
+    .footerlink{
+        display: none;
+    }
+    .footertop{
+        display: block;
+        padding-top: 1%;
+    }
+    .footerikon{
+        margin-top: 5%;
+        width: 100%;
+        height: 50px;
+    }
+    .footerbund p{
+        font-size: 10px;
+    }
+    /*Galleri*/
+    #gallerioverskrift{
+        font-size: 65px;
+    }
+    .midtbillede, .højrebillede{
+        display: none;
+    }
+    .venstrebillede{
+        width: 90%;
+    }
+    /*Find os*/
+    .kontakt{
+        display: block;
+        height: 800px;
+    }
+    .ikonboks{
+        width: 90%;
+        height: 250px;
+        margin-left: 5%;
+    }
+    .ikonboks h3{
+        font-size: 25px;
+    }
+    .ikonboks p{
+        font-size: 15px;
+    }
+    .lokationoverskrift p{
+        font-size: 15px;
+    }
+    .lokationoverskrift h3{
+        font-size: 30px;
+    }
+    .stederne{
+        display: block;
+        height: 200px;
+    }
+    .bokssted{
+        height: 300px;
+        margin-left: 5%;
+        width: 90%;
+    }
+    .bokssted h3{
+        font-size: 25px;
+    }
+    .bokssted p{
+        font-size: 15px;
+    }
+    .laptopskrift{
+        display: none;
+    }
+    .beskedomradeoverskrift h3{
+        font-size: 30px;
+    }
+    .beskedomradeoverskrift p{
+        font-size: 15px;
+    }
+    .container{
+        width: 70%;
+        margin-left: 15%;
+    }
+    .beskedomradeknap{
+        width: 60%;
+    }
+    .beskedomrade button{
+        width: 30%;
+        margin-left: 35%;
+    }
+   #procesbaggrund{
+    background-image: url(images/mobilbaggrundstreg.png);
+    width: 100%;
+   }
+   .processide{
+    display: block;
+   }
+   .procestekst{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 0;
+    padding-top: 8%;
+    height: 200px;
+   }
+   h6{
+    font-size: 15px;
+    word-spacing: 10px;
+   }
+   .procesanimate{
+    width: 90%;
+    margin-left: 5%;
+    height: 50%;
+   }
+   .processide button{
+    width: 50%;
+    margin-left: 25%;
+   }
+   .kort{
+    width: 180px;
+    height: 400px;
+   }
+   .stortitle{
+    font-size: 120px;
+   }
+   .title{
+    margin-bottom: 0;
+   }
+   .kort:hover .stortitle{
+    transform: translateY(70%);
+   }
+   .content{
+    width: 100%;
+   }
+   /*------Countdown------*/
+.countdown{
+    height: 100px;
+}
+.countdown p{
+    font-size: 50px;
+}
+.countdown h2{
+    font-size: 10px;
+
+}
+.broedtekst{
+    visibility: visible;
+}
+
+
+
+}
+
+
+/*--LAPTOP LAYOUT--*/
+@media screen and (min-width:874px){
+    .mobillogo{
+        display: none;
+    }
+    .mobilbillede{
+        display: none;
+    }
+    .mobilskrift{
+        display: none;
+    }
+    .procestekst{
+       padding: 20px 40px;
+    }
+}
